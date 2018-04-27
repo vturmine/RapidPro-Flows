@@ -3,7 +3,7 @@
 Depositories for RapidPro Flows of Digital Health Deployments
 * Patient registration
 * Health worker registration
-* Immunization (/Immunization/)
+* [Immunization](/Immunization/)
 * Nutrition
 * HIV/AIDS
 * Malaria
