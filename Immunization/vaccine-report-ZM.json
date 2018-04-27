@@ -1,3 +1,12 @@
+/*
+Flow for collecting vaccination report
+Requirement: 
+- Create Contact groups CHW and Children
+- CHW fields required: Province, District, Health Facility
+- CHildren fields required: ID, Province, District, Health Facility
+- 5 slots:  vaccine1+vaccine2+vaccine3+vaccine4+vaccine5
+- Vaccine options: BCG, OPV or Polio,DTP or DPT, PCV or Penta, Rota or RT, Measles or MR
+*/ 
 {
   "campaigns": [], 
   "version": "11.2", 
