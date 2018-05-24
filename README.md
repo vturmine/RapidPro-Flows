@@ -1,9 +1,20 @@
 # RapidPro Health Flows
 
 Depositories for RapidPro Flows of Digital Health Deployments
-* [Registration] (/Registration/)
-* Health worker registration
+
+By Application
+* [Registration](/Registration/)
+* [Reminder](/Reminder/)
 * [Report/Tracking](/tracking/)
+* [Alert](/Alert/)
+* [Campaign](/Campaign/)
+* [Provider 2 Provider](/Provider2Provider/)
+* [Data Collection](/Datacollection/)
+* [Data Exchange](/DataExchange/)
+* [Feedback](/Feedback/)
+
+By Use Cases
+* [Vaccination](/Immunization/)
 * Nutrition
 * HIV/AIDS
 * Malaria
