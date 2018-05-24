@@ -29,7 +29,7 @@ Requirement:
               "type": "reply",
               "uuid": "8962517f-6e6b-4f7f-97c7-6611ae7462f6",
               "msg": {
-                "eng": "** mVacc Registration **  Under5 ID + Sex + Birth Date + Child name (Date format: DD.MM.YY or DD/MM/YY)"
+                "eng": "** Baby Registration **  ID + Sex + Birth Date + Child name (Date format: DD.MM.YY or DD/MM/YY)"
               },
               "media": {},
               "quick_replies": [],
@@ -86,7 +86,7 @@ Requirement:
               "type": "reply",
               "uuid": "c560e462-ce46-442f-b980-30e8263e2f83",
               "msg": {
-                "eng": "Confirmation: \nUnder5 ID: @contact.temp ; \nDoB: @flow.dateofbirth ; \nSex: @flow.sex.category ; \nCaregiver: @flow.caregiver_name (@flow.phone);\nBirth: @flow.birth.category \n-- Yes/No --"
+                "eng": "Confirmation: \nID: @contact.temp ; \nDoB: @flow.dateofbirth ; \nSex: @flow.sex.category ; \nCaregiver: @flow.caregiver_name (@flow.phone);\nBirth: @flow.birth.category \n-- Yes/No --"
               },
               "media": {},
               "quick_replies": [],
@@ -105,7 +105,7 @@ Requirement:
               "type": "reply",
               "uuid": "9108fd03-1dca-45e0-bff3-c3ea99fc5593",
               "msg": {
-                "eng": "** mVacc ** The baby @contact.temp is registered. Report all given vaccines now, reply with VACCINE."
+                "eng": "The baby @contact.temp is registered."
               },
               "media": {},
               "quick_replies": [],
@@ -115,7 +115,7 @@ Requirement:
               "type": "send",
               "uuid": "e82fc4eb-a00a-416f-bbde-ffc550ff258e",
               "msg": {
-                "eng": "** mVacc ** Congrats! Your baby is registered on mVaccination. You will receive SMS for your baby. Ministry of Health"
+                "eng": "Congrats! Your baby is registered on RapidPro. You will receive SMS for your baby. Ministry of Health"
               },
               "contacts": [],
               "groups": [],
@@ -215,7 +215,7 @@ Requirement:
               "type": "reply",
               "uuid": "4660e2b2-77e9-4ad0-8073-af7600f728fc",
               "msg": {
-                "eng": "This under5 ID is already registered. Please check the under5 ID and send again:  Under5 ID + Sex + Date of birth"
+                "eng": "This ID is already registered. Please check the ID and send again: ID + Sex + Date of birth + Name"
               },
               "media": {},
               "quick_replies": [],
