@@ -3,17 +3,17 @@ Depositories for RapidPro Flows of Digital Health Deployments
 
 By Application
 * [Registration](/registration.md)
-* [Reminder](/Reminder/)
-* [Report/Tracking](/tracking/)
-* [Alert](/Alert/)
-* [Campaign](/Campaign/)
-* [Provider 2 Provider](/Provider2Provider/)
-* [Data Collection](/Datacollection/)
-* [Data Exchange](/DataExchange/)
-* [Feedback](/Feedback/)
+* Reminder
+* Report/Tracking
+* Alert
+* Campaign
+* Provider 2 Provider
+* Data Collection
+* Data Exchange 
+* Feedback
 
 By Use Cases
-* [Vaccination](./Vaccination/)
+* Vaccination
 * Nutrition
 * HIV/AIDS
 * Malaria
