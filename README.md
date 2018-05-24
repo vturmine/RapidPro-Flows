@@ -1,4 +1,7 @@
 # RapidPro Health Flows
+<p align="center">
+  <img src="https://unicef-rapidpro-for-health.herokuapp.com/static/img/logo.svg" width="350"/>
+</p>
 
 Depositories for RapidPro Flows of Digital Health Deployments
 
