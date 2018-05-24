@@ -1,8 +1,8 @@
-# RapidPro Health Flows
-<p align="center">
-  <img src="RPH/logo.svg" width="350"/>
+<p align="left">
+  <img src="RPH/logo.svg" width="250"/>
 </p>
 
+# RapidPro Health Flows
 Depositories for RapidPro Flows of Digital Health Deployments
 
 By Application
