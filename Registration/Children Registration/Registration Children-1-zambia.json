@@ -1,0 +1,1199 @@
+{
+  "version": "11.3",
+  "site": "https://app.rapidpro.io",
+  "flows": [
+    {
+      "entry": "aec104df-727a-4afa-90ef-d47c60e47aa4",
+      "action_sets": [
+        {
+          "uuid": "aec104df-727a-4afa-90ef-d47c60e47aa4",
+          "x": 298,
+          "y": 0,
+          "destination": "11ec43ea-62b2-4795-9dd7-7b8499163dc4",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "8962517f-6e6b-4f7f-97c7-6611ae7462f6",
+              "msg": {
+                "eng": "** mVacc Registration **  Under5 ID + Sex + Birth Date + Child name (Date format: DD.MM.YY or DD/MM/YY)"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "fcd4b168-b2f1-4a61-aa88-904112b95303"
+        },
+        {
+          "uuid": "81a58159-d18c-4acd-9a81-94aad7c5dc85",
+          "x": 1600,
+          "y": 76,
+          "destination": "11ec43ea-62b2-4795-9dd7-7b8499163dc4",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "4f529918-18e9-440c-9942-22079a47ea20",
+              "msg": {
+                "eng": "Error in the ID format. Pls use only the number of the child on the under 5 card. Do not use the format 202/17 or the full number. Resend ID + SEX + DOB + NAME"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "38d9aab0-cbe8-41aa-a30d-4b96ceed95b8"
+        },
+        {
+          "uuid": "2b33eb52-a0bd-4981-97c5-8e79ac6295a1",
+          "x": 809,
+          "y": 1725,
+          "destination": "d54703e4-4325-412b-a1ac-e6cc355ee891",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "667d242a-9d91-45db-8011-2bea309c18d3",
+              "msg": {
+                "eng": "Please send Y if correct or N if there are mistakes"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "d5af7c8e-9f64-43c7-a07f-996123579f58"
+        },
+        {
+          "uuid": "6edeffcb-7689-42f1-8427-5ebb5a41381b",
+          "x": 345,
+          "y": 1486,
+          "destination": "d54703e4-4325-412b-a1ac-e6cc355ee891",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "c560e462-ce46-442f-b980-30e8263e2f83",
+              "msg": {
+                "eng": "Confirmation: \nUnder5 ID: @contact.temp ; \nDoB: @flow.dateofbirth ; \nSex: @flow.sex.category ; \nCaregiver: @flow.caregiver_name (@flow.phone);\nBirth: @flow.birth.category \n-- Yes/No --"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "273b970f-38da-4ea7-a239-a28007c3fb23"
+        },
+        {
+          "uuid": "184d610a-436d-4ecd-839e-bdf9094db310",
+          "x": 834,
+          "y": 2419,
+          "destination": null,
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "9108fd03-1dca-45e0-bff3-c3ea99fc5593",
+              "msg": {
+                "eng": "** mVacc ** The baby @contact.temp is registered. Report all given vaccines now, reply with VACCINE."
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            },
+            {
+              "type": "send",
+              "uuid": "e82fc4eb-a00a-416f-bbde-ffc550ff258e",
+              "msg": {
+                "eng": "** mVacc ** Congrats! Your baby is registered on mVaccination. You will receive SMS for your baby. Ministry of Health"
+              },
+              "contacts": [],
+              "groups": [],
+              "variables": [
+                {
+                  "id": "@flow.phone"
+                }
+              ],
+              "media": {}
+            }
+          ],
+          "exit_uuid": "078aec51-3e8d-4807-b525-e780145693f4"
+        },
+        {
+          "uuid": "195e2e80-68a8-41dc-ba0b-19e7ae875a99",
+          "x": 336,
+          "y": 947,
+          "destination": "27d56085-4428-4049-a0e5-b8b35e6396ef",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "53ece7cf-34b3-4a28-a6a1-ee529a5c8fd0",
+              "msg": {
+                "eng": "Please, give us the phone number of caretaker + name + village (e.g. 0955025827 + Priscilla Kaluba + Kalama)"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "0e3e1774-791f-4fdc-80bc-714563eb8269"
+        },
+        {
+          "uuid": "8c87f83c-a6e7-4362-af3c-f8fe41f92d61",
+          "x": 344,
+          "y": 1308,
+          "destination": "527616e3-f312-4ed2-8f40-ad6c999c85f9",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "01374cef-fa84-4c31-850e-5c7c3a775a6a",
+              "msg": {
+                "eng": "Last step, could you tell us where the baby was born? Send H for HOME or F for FACILITY."
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "b953572e-b61c-4873-bfa3-1ddf5b1dab3b"
+        },
+        {
+          "uuid": "d6740b14-0a6d-440a-a1ce-9b6ecaff0165",
+          "x": 1056,
+          "y": 1093,
+          "destination": "27d56085-4428-4049-a0e5-b8b35e6396ef",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "b91d2d6a-3423-46d5-88c2-50aace4557d5",
+              "msg": {
+                "eng": "Phone number format is incorrect. Please, resend the contact phone number + Name of the caretaker like this example: 0955025827 + Priscilla Kaluba + Kalama"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "9d4925a2-e002-4fea-a5f3-a72d54bb1eb5"
+        },
+        {
+          "uuid": "c7dd3461-a457-41fc-bd5f-53a71dc2be8b",
+          "x": 1133,
+          "y": 1538,
+          "destination": "527616e3-f312-4ed2-8f40-ad6c999c85f9",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "9a13abb7-7b5e-4e93-86fc-aa57093b2836",
+              "msg": {
+                "eng": "Please Send only the letter: H for HOME or F for FACILITY."
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "1c3bbead-ac7d-43f0-bd1c-9fab25dcd709"
+        },
+        {
+          "uuid": "ae8f7cf5-1e74-4161-94a8-53c7fa8b12bd",
+          "x": 1358,
+          "y": 896,
+          "destination": "11ec43ea-62b2-4795-9dd7-7b8499163dc4",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "4660e2b2-77e9-4ad0-8073-af7600f728fc",
+              "msg": {
+                "eng": "This under5 ID is already registered. Please check the under5 ID and send again:  Under5 ID + Sex + Date of birth"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "295c6bb2-93e7-4d33-ae2f-03bf3f27c1dc"
+        },
+        {
+          "uuid": "c35f8548-40d0-4e33-8ffd-67a7d1813787",
+          "x": 335,
+          "y": 816,
+          "destination": "89a3b469-cfcc-4982-b6de-0aac3cbcc9bb",
+          "actions": [
+            {
+              "type": "save",
+              "uuid": "7410306c-3108-43fe-9223-4f6bbe0f4a5f",
+              "label": "Temp",
+              "field": "temp",
+              "value": "@(CONCATENATE(flow.id, \"/\", YEAR(flow.dateofbirth)))"
+            }
+          ],
+          "exit_uuid": "0bf4834c-e62c-4f7e-9764-0b704f62fa38"
+        },
+        {
+          "uuid": "c62e8581-0ce3-4728-9746-db22a7c22beb",
+          "x": 1225,
+          "y": 1720,
+          "destination": null,
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "f5afb5b8-a0b3-4915-94ac-0a119acd8d8e",
+              "msg": {
+                "eng": "Session expired - please restart with BABY"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "d93f1df9-1243-469c-91e1-aa732b404634"
+        },
+        {
+          "uuid": "e9928f02-c11c-4621-a73c-3b75f324b395",
+          "x": 438,
+          "y": 1972,
+          "destination": "bbe950b3-eae2-4a1d-a3d5-7cdef2dddbc5",
+          "actions": [
+            {
+              "type": "trigger-flow",
+              "uuid": "06731c25-3a38-4516-a879-33d6f89eea0c",
+              "flow": {
+                "uuid": "df914ce9-f480-408a-bc93-bcd9a11d139c",
+                "name": "Registration Baby - Step2"
+              },
+              "contacts": [],
+              "groups": [],
+              "variables": [
+                {
+                  "id": "@new_contact"
+                }
+              ]
+            },
+            {
+              "type": "trigger-flow",
+              "uuid": "33baa65d-4978-4e05-b11a-418ad47df099",
+              "flow": {
+                "uuid": "8a24b666-1545-476a-895f-ce9571926bab",
+                "name": "Registration Mother - Step2"
+              },
+              "contacts": [],
+              "groups": [],
+              "variables": [
+                {
+                  "id": "@new_contact"
+                }
+              ]
+            },
+            {
+              "type": "save",
+              "uuid": "b33a2575-046e-4612-bcbe-0953233efa97",
+              "label": "Children Count",
+              "field": "children_count",
+              "value": "@(contact.children_count + 1)"
+            },
+            {
+              "type": "del_group",
+              "uuid": "ac9bf3c5-b8c2-45d4-a403-51f0e1395916",
+              "groups": [
+                {
+                  "uuid": "40e6ae62-e0ff-4f17-9aa1-843338a9d4af",
+                  "name": "CBV inactive"
+                }
+              ]
+            },
+            {
+              "type": "add_group",
+              "uuid": "6788a47f-6ba2-4c9c-8457-2aceec207008",
+              "groups": [
+                {
+                  "uuid": "de02fee6-b719-442e-8dda-fa7f3e805c1b",
+                  "name": "CBV Active"
+                }
+              ]
+            }
+          ],
+          "exit_uuid": "aa8d2d41-e345-43d3-8afa-7b5e777f87ea"
+        },
+        {
+          "uuid": "d9c605d1-355f-4a54-a0f9-8745d6673925",
+          "x": 835,
+          "y": 1979,
+          "destination": "184d610a-436d-4ecd-839e-bdf9094db310",
+          "actions": [
+            {
+              "type": "trigger-flow",
+              "uuid": "c5427ff0-4751-4139-95d7-de608f113df0",
+              "flow": {
+                "uuid": "df914ce9-f480-408a-bc93-bcd9a11d139c",
+                "name": "Registration Baby - Step2"
+              },
+              "contacts": [],
+              "groups": [],
+              "variables": [
+                {
+                  "id": "@new_contact"
+                }
+              ]
+            },
+            {
+              "type": "trigger-flow",
+              "uuid": "7b215a4d-6b48-44ea-8394-1967dcaf4243",
+              "flow": {
+                "uuid": "8a24b666-1545-476a-895f-ce9571926bab",
+                "name": "Registration Mother - Step2"
+              },
+              "contacts": [],
+              "groups": [],
+              "variables": [
+                {
+                  "id": "@flow.phone"
+                }
+              ]
+            },
+            {
+              "type": "save",
+              "uuid": "b09c1221-671e-4b92-b6b5-c1e8cf8d5bc9",
+              "label": "Children Count",
+              "field": "children_count",
+              "value": "@(contact.children_count + 1)"
+            },
+            {
+              "type": "del_group",
+              "uuid": "ae441a0e-ceb5-44dd-89e8-4a95258b98cf",
+              "groups": [
+                {
+                  "uuid": "40e6ae62-e0ff-4f17-9aa1-843338a9d4af",
+                  "name": "CBV inactive"
+                }
+              ]
+            },
+            {
+              "type": "add_group",
+              "uuid": "01f201e6-31d0-46de-a0de-6688997718f2",
+              "groups": [
+                {
+                  "uuid": "de02fee6-b719-442e-8dda-fa7f3e805c1b",
+                  "name": "CBV Active"
+                }
+              ]
+            }
+          ],
+          "exit_uuid": "37625a59-cd7a-4d49-91c0-0256856a92b4"
+        },
+        {
+          "uuid": "bbe950b3-eae2-4a1d-a3d5-7cdef2dddbc5",
+          "x": 429,
+          "y": 2412,
+          "destination": null,
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "67c73fed-0677-449d-9143-da8b76eef715",
+              "msg": {
+                "eng": "** mVacc ** The baby @contact.temp is registered. Report all given vaccines now, reply with VACCINE."
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "3bde0dd2-048c-4ebb-b92a-dff4684aa16d"
+        },
+        {
+          "uuid": "b6011ff4-9401-404c-8c73-969cff61a43d",
+          "x": 951,
+          "y": 621,
+          "destination": "11ec43ea-62b2-4795-9dd7-7b8499163dc4",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "8c71ce5b-7ed8-43dd-96aa-b81f33b8c73c",
+              "msg": {
+                "eng": "Error on Date of birth, please check if the format is correct. Use this format (DD.MM.YY or DD/MM/YY) and resend ID+SEX+DOB+NAME"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "4d92ffed-8445-47e4-95d7-5b673410d191"
+        },
+        {
+          "uuid": "26661c47-62c6-4ad3-925e-ae1140aaa83b",
+          "x": 956,
+          "y": 438,
+          "destination": "11ec43ea-62b2-4795-9dd7-7b8499163dc4",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "af423118-45b0-4c2f-952e-a099593cc160",
+              "msg": {
+                "eng": "Error on SEX, please check if you use F for Female or M for Male. Check if the separator is '+'. Resend ID + SEX + DOB + NAME"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "8d225306-4c0d-4b7d-8e4d-8fd77b9875de"
+        },
+        {
+          "uuid": "9dcad3b9-6608-447e-8e97-9f95fd3bb858",
+          "x": 1345,
+          "y": 159,
+          "destination": "11ec43ea-62b2-4795-9dd7-7b8499163dc4",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "57a1e2e6-eaf6-4583-aa00-c9fdf9fb532b",
+              "msg": {
+                "eng": "Error in the ID format. Do not use the format @flow.id .Pls use only the number of the child on the under 5 card. Resend ID + SEX + DOB + NAME"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "47a5e6a1-e10c-4789-9e6f-1b5a29965203"
+        },
+        {
+          "uuid": "91378782-e4ca-49ac-8ac4-bbc6ca206df0",
+          "x": 907,
+          "y": 184,
+          "destination": "11ec43ea-62b2-4795-9dd7-7b8499163dc4",
+          "actions": [
+            {
+              "type": "reply",
+              "uuid": "361ca30d-6c9b-45e7-a9c7-cd1dfd170be8",
+              "msg": {
+                "eng": "Error in the ID format. Do not use the full number. Pls use only the number of the child on the under 5 card (3 or 4 last digits). Resend ID + SEX + DOB + NAME"
+              },
+              "media": {},
+              "quick_replies": [],
+              "send_all": false
+            }
+          ],
+          "exit_uuid": "83758801-098d-4c1f-a7a3-2eeddd7b07ed"
+        }
+      ],
+      "rule_sets": [
+        {
+          "uuid": "5e1dae4c-904b-4e70-a09d-0bfe76c55a31",
+          "x": 407,
+          "y": 178,
+          "label": "ID",
+          "rules": [
+            {
+              "uuid": "a2a33969-d1a3-4cfd-8278-1da90a3b5dda",
+              "category": {
+                "eng": "error"
+              },
+              "destination": "91378782-e4ca-49ac-8ac4-bbc6ca206df0",
+              "destination_type": "A",
+              "test": {
+                "type": "regex",
+                "test": {
+                  "eng": "(\\d{5,})"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "5a7c38cd-e24e-4d3d-8456-b2e5a24a5dbc",
+              "category": {
+                "eng": "with /"
+              },
+              "destination": "9dcad3b9-6608-447e-8e97-9f95fd3bb858",
+              "destination_type": "A",
+              "test": {
+                "type": "regex",
+                "test": {
+                  "eng": "(\\/)"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "e464b808-f44a-4f46-8abf-afe5c0644a72",
+              "category": {
+                "eng": "with ,"
+              },
+              "destination": "91378782-e4ca-49ac-8ac4-bbc6ca206df0",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "eng": "(\\,)"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "1f518dcd-d770-4343-ae71-ec124d2e1a61",
+              "category": {
+                "eng": "id"
+              },
+              "destination": "1748230a-efb1-41c2-89f5-c728548e8f47",
+              "destination_type": "R",
+              "test": {
+                "type": "number"
+              },
+              "label": null
+            },
+            {
+              "uuid": "ea54b966-9835-411a-ac68-36c36e4c8338",
+              "category": {
+                "eng": "Other"
+              },
+              "destination": "81a58159-d18c-4acd-9a81-94aad7c5dc85",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "form_field",
+          "response_type": "",
+          "operand": "@flow.all",
+          "config": {
+            "field_delimiter": "+",
+            "field_index": 0
+          }
+        },
+        {
+          "uuid": "46f18a9a-235e-4b5a-8e18-f98c01076567",
+          "x": 381,
+          "y": 569,
+          "label": "dateofbirth",
+          "rules": [
+            {
+              "uuid": "d5c6935b-a1d1-4a81-8734-55353f27c318",
+              "category": {
+                "eng": "OK"
+              },
+              "destination": "7b27a89c-868c-4837-bd65-188083ad5f82",
+              "destination_type": "R",
+              "test": {
+                "type": "regex",
+                "test": {
+                  "eng": "(?:(?:31(\\/|-|\\.)(?:0?[13578]|1[02]))\\1|(?:(?:29|30)(\\/|-|\\.)(?:0?[1,3-9]|1[0-2])\\2))(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$|^(?:29(\\/|-|\\.)0?2\\3(?:(?:(?:1[6-9]|[2-9]\\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\\d|2[0-8])(\\/|-|\\.)(?:(?:0?[1-9])|(?:1[0-2]))\\4(?:(?:1[6-9]|[2-9]\\d)?\\d{2})"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "97434da0-8794-41b3-9110-df06aad26dfa",
+              "category": {
+                "eng": "Other"
+              },
+              "destination": "b6011ff4-9401-404c-8c73-969cff61a43d",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "form_field",
+          "response_type": "",
+          "operand": "@flow.all",
+          "config": {
+            "field_delimiter": "+",
+            "field_index": 2
+          }
+        },
+        {
+          "uuid": "d54703e4-4325-412b-a1ac-e6cc355ee891",
+          "x": 296,
+          "y": 1764,
+          "label": "BabyValidationInfo",
+          "rules": [
+            {
+              "uuid": "029d4949-f5f9-4eeb-8601-83b7888c1ea7",
+              "category": {
+                "eng": "No"
+              },
+              "destination": "aec104df-727a-4afa-90ef-d47c60e47aa4",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "eng": "N No"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "30a4215a-ad66-4881-9544-af8f405aa0cc",
+              "category": {
+                "eng": "Yes"
+              },
+              "destination": "e1172182-f9b0-4a7a-99e1-3529629a23ea",
+              "destination_type": "R",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "eng": "Y Yes"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "d446e87b-5df3-42b7-a1a8-bc68e58fcfd2",
+              "category": {
+                "eng": "Other"
+              },
+              "destination": "2b33eb52-a0bd-4981-97c5-8e79ac6295a1",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            },
+            {
+              "uuid": "fbd6389e-95b2-433e-997d-9918f0660da8",
+              "category": {
+                "eng": "No Response"
+              },
+              "destination": "c62e8581-0ce3-4728-9746-db22a7c22beb",
+              "destination_type": "A",
+              "test": {
+                "type": "timeout",
+                "minutes": 60
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "wait_message",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {}
+        },
+        {
+          "uuid": "11ec43ea-62b2-4795-9dd7-7b8499163dc4",
+          "x": 625,
+          "y": 25,
+          "label": "all",
+          "rules": [
+            {
+              "uuid": "ea162b64-abc7-4498-ba8c-af1401fba95c",
+              "category": {
+                "eng": "All Responses"
+              },
+              "destination": "5e1dae4c-904b-4e70-a09d-0bfe76c55a31",
+              "destination_type": "R",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            },
+            {
+              "uuid": "2904e0cf-2bc1-485f-bb49-c430794b83fb",
+              "category": {
+                "eng": "No Response"
+              },
+              "destination": "c62e8581-0ce3-4728-9746-db22a7c22beb",
+              "destination_type": "A",
+              "test": {
+                "type": "timeout",
+                "minutes": 180
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "wait_message",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {}
+        },
+        {
+          "uuid": "1748230a-efb1-41c2-89f5-c728548e8f47",
+          "x": 371,
+          "y": 396,
+          "label": "sex",
+          "rules": [
+            {
+              "uuid": "6dbf93fd-82a8-460b-b6db-793e2e38600d",
+              "category": {
+                "eng": "Male"
+              },
+              "destination": "46f18a9a-235e-4b5a-8e18-f98c01076567",
+              "destination_type": "R",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "eng": "M"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "2bf3823c-c971-462e-8bde-662c4d388072",
+              "category": {
+                "eng": "Female"
+              },
+              "destination": "46f18a9a-235e-4b5a-8e18-f98c01076567",
+              "destination_type": "R",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "eng": "F"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "cdc3573e-3750-446e-a640-9a84a22f3e80",
+              "category": {
+                "eng": "Other"
+              },
+              "destination": "26661c47-62c6-4ad3-925e-ae1140aaa83b",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "form_field",
+          "response_type": "",
+          "operand": "@flow.all",
+          "config": {
+            "field_delimiter": "+",
+            "field_index": 1
+          }
+        },
+        {
+          "uuid": "27d56085-4428-4049-a0e5-b8b35e6396ef",
+          "x": 698,
+          "y": 944,
+          "label": "all2",
+          "rules": [
+            {
+              "uuid": "6d257912-58a3-4f7c-99db-5001815fea32",
+              "category": {
+                "eng": "All Responses"
+              },
+              "destination": "987f3251-8272-4eac-b20c-38b616de33f5",
+              "destination_type": "R",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            },
+            {
+              "uuid": "6a97a66d-4db5-42f3-b7a1-afaf511c6c97",
+              "category": {
+                "eng": "No Response"
+              },
+              "destination": "c62e8581-0ce3-4728-9746-db22a7c22beb",
+              "destination_type": "A",
+              "test": {
+                "type": "timeout",
+                "minutes": 180
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "wait_message",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {}
+        },
+        {
+          "uuid": "987f3251-8272-4eac-b20c-38b616de33f5",
+          "x": 689,
+          "y": 1041,
+          "label": "phone",
+          "rules": [
+            {
+              "uuid": "4d4b0088-c924-4fac-9d2c-a12326396759",
+              "category": {
+                "eng": "phone"
+              },
+              "destination": "e0dac2c8-f6d1-4701-89eb-2ce23d4bfcfe",
+              "destination_type": "R",
+              "test": {
+                "type": "phone"
+              },
+              "label": null
+            },
+            {
+              "uuid": "3183354a-a6d6-41db-b41a-0f1527b5dec8",
+              "category": {
+                "eng": "NA"
+              },
+              "destination": "e0dac2c8-f6d1-4701-89eb-2ce23d4bfcfe",
+              "destination_type": "R",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "eng": "NA"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "1f21cadc-b0af-49fa-ba13-1e1799737e2f",
+              "category": {
+                "eng": "Other"
+              },
+              "destination": "d6740b14-0a6d-440a-a1ce-9b6ecaff0165",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "form_field",
+          "response_type": "",
+          "operand": "@flow.all2",
+          "config": {
+            "field_delimiter": "+",
+            "field_index": 0
+          }
+        },
+        {
+          "uuid": "e0dac2c8-f6d1-4701-89eb-2ce23d4bfcfe",
+          "x": 699,
+          "y": 1131,
+          "label": "Caregiver Name",
+          "rules": [
+            {
+              "uuid": "1586ef09-8729-4399-be01-ca5f9d59bc89",
+              "category": {
+                "eng": "All Responses"
+              },
+              "destination": "3eee04b6-edaf-40dd-8dea-eac25c24c4cc",
+              "destination_type": "R",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "form_field",
+          "response_type": "",
+          "operand": "@flow.all2",
+          "config": {
+            "field_delimiter": "+",
+            "field_index": 1
+          }
+        },
+        {
+          "uuid": "3eee04b6-edaf-40dd-8dea-eac25c24c4cc",
+          "x": 696,
+          "y": 1214,
+          "label": "Location",
+          "rules": [
+            {
+              "uuid": "1a41c9ec-104c-4082-8ede-229eda0fe10b",
+              "category": {
+                "eng": "All Responses"
+              },
+              "destination": "8c87f83c-a6e7-4362-af3c-f8fe41f92d61",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "form_field",
+          "response_type": "",
+          "operand": "@flow.all2",
+          "config": {
+            "field_delimiter": "+",
+            "field_index": 2
+          }
+        },
+        {
+          "uuid": "527616e3-f312-4ed2-8f40-ad6c999c85f9",
+          "x": 644,
+          "y": 1427,
+          "label": "Birth",
+          "rules": [
+            {
+              "uuid": "116040cd-826a-4578-9210-91c3a23a0e0f",
+              "category": {
+                "eng": "Facility"
+              },
+              "destination": "6edeffcb-7689-42f1-8427-5ebb5a41381b",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "eng": "F Facility"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "074b43b3-33e8-4c5c-944e-abad9d4267b0",
+              "category": {
+                "eng": "Home"
+              },
+              "destination": "6edeffcb-7689-42f1-8427-5ebb5a41381b",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "eng": "H home"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "6864a524-4ec6-48e5-bd5d-5f306a2f92d5",
+              "category": {
+                "eng": "Other"
+              },
+              "destination": "c7dd3461-a457-41fc-bd5f-53a71dc2be8b",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            },
+            {
+              "uuid": "e4f87b15-0780-4954-bdb4-e844909394b7",
+              "category": {
+                "eng": "No Response"
+              },
+              "destination": "c62e8581-0ce3-4728-9746-db22a7c22beb",
+              "destination_type": "A",
+              "test": {
+                "type": "timeout",
+                "minutes": 180
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "wait_message",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {}
+        },
+        {
+          "uuid": "89a3b469-cfcc-4982-b6de-0aac3cbcc9bb",
+          "x": 1214,
+          "y": 686,
+          "label": "check",
+          "rules": [
+            {
+              "uuid": "c5996a80-6660-4f13-8a4c-0dffb11673db",
+              "category": {
+                "eng": "Success"
+              },
+              "destination": "9f9ea490-1adf-46a2-b1a8-077fa2713882",
+              "destination_type": "R",
+              "test": {
+                "type": "webhook_status",
+                "status": "success"
+              },
+              "label": null
+            },
+            {
+              "uuid": "7dd3491f-d2d6-45d5-90ef-87fdc57179a1",
+              "category": {
+                "eng": "Failure"
+              },
+              "destination": null,
+              "destination_type": null,
+              "test": {
+                "type": "webhook_status",
+                "status": "failure"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "webhook",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {
+            "webhook": "http://www.1000days.mobi/zambia/checkBaby.php?id=@contact.temp&health_facility=@contact.facility",
+            "webhook_action": "GET",
+            "webhook_headers": []
+          }
+        },
+        {
+          "uuid": "9f9ea490-1adf-46a2-b1a8-077fa2713882",
+          "x": 1188,
+          "y": 796,
+          "label": "new child",
+          "rules": [
+            {
+              "uuid": "22bc33b1-42b0-4b35-8760-2eb54cb1b630",
+              "category": {
+                "eng": "Ok"
+              },
+              "destination": "195e2e80-68a8-41dc-ba0b-19e7ae875a99",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "eng": "No"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "05a1cae5-2d42-4e6f-bb1c-1b21906280d8",
+              "category": {
+                "eng": "Error"
+              },
+              "destination": "ae8f7cf5-1e74-4161-94a8-53c7fa8b12bd",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "eng": "Match"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "2a036624-180c-4a83-9add-48a4dfe83cec",
+              "category": {
+                "eng": "Other"
+              },
+              "destination": null,
+              "destination_type": null,
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "flow_field",
+          "response_type": "",
+          "operand": "@flow.check",
+          "config": {}
+        },
+        {
+          "uuid": "7b27a89c-868c-4837-bd65-188083ad5f82",
+          "x": 320,
+          "y": 706,
+          "label": "name",
+          "rules": [
+            {
+              "uuid": "9529fac4-7d99-451d-b167-f31b46ba5966",
+              "category": {
+                "eng": "All Responses"
+              },
+              "destination": "c35f8548-40d0-4e33-8ffd-67a7d1813787",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "form_field",
+          "response_type": "",
+          "operand": "@flow.all",
+          "config": {
+            "field_delimiter": "+",
+            "field_index": 3
+          }
+        },
+        {
+          "uuid": "e1172182-f9b0-4a7a-99e1-3529629a23ea",
+          "x": 656,
+          "y": 1891,
+          "label": "Check phone",
+          "rules": [
+            {
+              "uuid": "7e095322-6cbe-4695-b77e-3b2be99ee2d1",
+              "category": {
+                "eng": "No Phone"
+              },
+              "destination": "e9928f02-c11c-4621-a73c-3b75f324b395",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "eng": "@contact.tel_e164"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "2e848498-69cc-4ea8-ac70-4bec23a955db",
+              "category": {
+                "eng": "Na"
+              },
+              "destination": "e9928f02-c11c-4621-a73c-3b75f324b395",
+              "destination_type": "A",
+              "test": {
+                "type": "contains_any",
+                "test": {
+                  "eng": "NA"
+                }
+              },
+              "label": null
+            },
+            {
+              "uuid": "31795a6e-3779-48b3-a411-3d7af1ade6e4",
+              "category": {
+                "eng": "Other"
+              },
+              "destination": "d9c605d1-355f-4a54-a0f9-8745d6673925",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "expression",
+          "response_type": "",
+          "operand": "@flow.phone",
+          "config": {}
+        }
+      ],
+      "base_language": "eng",
+      "flow_type": "F",
+      "version": "11.3",
+      "metadata": {
+        "uuid": "a223082e-6eef-4aa6-a3f6-e6e1f274b001",
+        "notes": [],
+        "expires": 180,
+        "name": "Registration Baby - Step1 [baby]",
+        "saved_on": "2018-05-06T14:38:55.618366Z",
+        "revision": 572
+      }
+    }
+  ],
+  "campaigns": [],
+  "triggers": [
+    {
+      "trigger_type": "K",
+      "keyword": "baby",
+      "flow": {
+        "uuid": "a223082e-6eef-4aa6-a3f6-e6e1f274b001",
+        "name": "Registration Baby - Step1 [baby]"
+      },
+      "groups": [
+        {
+          "uuid": "2639e291-c29c-48e0-9fd2-b587e7f1f3d6",
+          "name": "CBV"
+        }
+      ],
+      "channel": null
+    }
+  ]
+}

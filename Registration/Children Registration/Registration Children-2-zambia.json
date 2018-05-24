@@ -1,0 +1,261 @@
+{
+  "version": "11.3",
+  "site": "https://app.rapidpro.io",
+  "flows": [
+    {
+      "entry": "ce89b4fb-9abb-4752-80fa-1965450c5a9b",
+      "action_sets": [
+        {
+          "uuid": "54ea247f-7bd7-4233-a2f4-0f01b2585eee",
+          "x": 568,
+          "y": 97,
+          "destination": "8d29af61-8b20-421c-bf0c-9eb66e2a972c",
+          "actions": [
+            {
+              "field": "name",
+              "type": "save",
+              "uuid": "0d1dffc0-da9d-4017-abb5-f4dac85594cb",
+              "value": "@(PROPER(parent.caregiver_name))",
+              "label": "Contact Name"
+            },
+            {
+              "field": "province",
+              "type": "save",
+              "uuid": "8cd22f55-dd8e-4334-a8f8-69cfb5e81126",
+              "value": "@parent.contact.province",
+              "label": "Province"
+            },
+            {
+              "field": "district",
+              "type": "save",
+              "uuid": "643be34f-f38b-4f36-a4e6-3005c35eb75c",
+              "value": "@parent.contact.district",
+              "label": "District"
+            },
+            {
+              "field": "facility",
+              "type": "save",
+              "uuid": "1d4e56c6-8cf8-48b7-9903-d50a99d70fba",
+              "value": "@parent.contact.facility",
+              "label": "Facility"
+            },
+            {
+              "field": "zone",
+              "type": "save",
+              "uuid": "41ecd71a-a97e-4576-82cd-6f8511240b1f",
+              "value": "@parent.contact.zone",
+              "label": "Zone"
+            },
+            {
+              "field": "supervisor",
+              "type": "save",
+              "uuid": "fff00b8e-8c79-4ac8-97de-0a4c531a6918",
+              "value": "@parent.contact.name",
+              "label": "Supervisor"
+            },
+            {
+              "field": "supervisor_phone",
+              "type": "save",
+              "uuid": "bed53630-032f-479c-b6e2-faa2a6feb736",
+              "value": "@parent.contact.tel_e164",
+              "label": "Supervisor Phone"
+            },
+            {
+              "field": "location",
+              "type": "save",
+              "uuid": "d6fb7332-7594-488d-b92c-6e93cba12f20",
+              "value": "@(PROPER(parent.location))",
+              "label": "Location"
+            },
+            {
+              "field": "position",
+              "type": "save",
+              "uuid": "8a305412-540d-47e6-a9f4-08e2bf9c98bd",
+              "value": "Caretaker",
+              "label": "Position"
+            },
+            {
+              "type": "add_group",
+              "uuid": "8182c3c0-2b2a-45b2-bf92-06c2a18c1b73",
+              "groups": [
+                {
+                  "uuid": "8f29bc87-a927-493c-8b89-fb170d3b2d21",
+                  "name": "Caretakers"
+                },
+                "@contact.province",
+                "@contact.district"
+              ]
+            },
+            {
+              "field": "date_joined",
+              "type": "save",
+              "uuid": "bddd08f9-1e2b-43a0-a4ca-79f084bf4e32",
+              "value": "@date.today",
+              "label": "Date Joined"
+            }
+          ],
+          "exit_uuid": "ac6a90a6-2007-43de-969d-be31c426262a"
+        },
+        {
+          "uuid": "daf91499-c3ee-4daa-acd5-6e63d91e5d6d",
+          "x": 736,
+          "y": 1048,
+          "destination": null,
+          "actions": [
+            {
+              "action": "GET",
+              "webhook": "http://www.1000days.mobi/zambia/addMother.php?uuid=@contact.uuid&mother_name=@contact.name&mother_phone=NULL&province=@contact.province&district=@contact.district&health_facility=@contact.facility&location=@contact.location&chw_phone=@contact.supervisor_phone&zone=@contact.zone",
+              "type": "api",
+              "uuid": "cdd7e749-f91e-4d40-9ca6-c0d3d6db4234",
+              "webhook_headers": []
+            }
+          ],
+          "exit_uuid": "47baa9e9-322c-4229-a34f-1d1a6486148d"
+        },
+        {
+          "uuid": "5f9b7db8-1fc6-4133-b196-506d353884f1",
+          "x": 1119,
+          "y": 1052,
+          "destination": null,
+          "actions": [
+            {
+              "action": "GET",
+              "webhook": "http://www.1000days.mobi/zambia/addMother.php?uuid=@contact.uuid&mother_name=@contact.name&mother_phone=@contact.tel_e164&province=@contact.province&district=@contact.district&health_facility=@contact.facility&location=@contact.location&chw_phone=@contact.supervisor_phone&zone=@contact.zone",
+              "type": "api",
+              "uuid": "e6d222a3-24a7-4c04-888d-662c341e30b7",
+              "webhook_headers": []
+            }
+          ],
+          "exit_uuid": "a703f035-7b3c-4643-a04e-26ee076769d4"
+        },
+        {
+          "uuid": "d3790505-f6ba-4bf9-9757-c44fa116274e",
+          "x": 1064,
+          "y": 892,
+          "destination": "5f9b7db8-1fc6-4133-b196-506d353884f1",
+          "actions": [
+            {
+              "field": "tel_e164",
+              "type": "save",
+              "uuid": "10ccc977-a9ec-4b79-93ab-1791d412c571",
+              "value": "@parent.phone",
+              "label": "Phone Number"
+            }
+          ],
+          "exit_uuid": "14b7b6e2-294a-491e-811d-53de4dded4f0"
+        }
+      ],
+      "rule_sets": [
+        {
+          "uuid": "8d29af61-8b20-421c-bf0c-9eb66e2a972c",
+          "x": 887,
+          "y": 771,
+          "label": "Filter",
+          "rules": [
+            {
+              "category": {
+                "base": "No Phone"
+              },
+              "uuid": "191064f7-3a43-4c60-a306-c60a286b953c",
+              "destination_type": "A",
+              "test": {
+                "test": {
+                  "base": "@parent.contact.tel_e164"
+                },
+                "type": "contains_any"
+              },
+              "destination": "daf91499-c3ee-4daa-acd5-6e63d91e5d6d",
+              "label": null
+            },
+            {
+              "category": {
+                "base": "Other"
+              },
+              "uuid": "661efa3e-3776-4fe1-8e1f-19fbc8097613",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "destination": "d3790505-f6ba-4bf9-9757-c44fa116274e",
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "expression",
+          "response_type": "",
+          "operand": "@parent.phone",
+          "config": {}
+        },
+        {
+          "uuid": "ce89b4fb-9abb-4752-80fa-1965450c5a9b",
+          "x": 203,
+          "y": 0,
+          "label": "Group",
+          "rules": [
+            {
+              "category": {
+                "base": "CBV"
+              },
+              "uuid": "3868f613-a8a3-4a10-b463-f55b27f13dac",
+              "destination_type": null,
+              "test": {
+                "test": {
+                  "uuid": "2639e291-c29c-48e0-9fd2-b587e7f1f3d6",
+                  "name": "CBV"
+                },
+                "type": "in_group"
+              },
+              "destination": null,
+              "label": null
+            },
+            {
+              "category": {
+                "base": "Health Facility"
+              },
+              "uuid": "e623978e-0376-4b76-9a64-deea7d593b89",
+              "destination_type": null,
+              "test": {
+                "test": {
+                  "uuid": "37e3db4d-4768-4556-957e-6d1163594381",
+                  "name": "Health Facility"
+                },
+                "type": "in_group"
+              },
+              "destination": null,
+              "label": null
+            },
+            {
+              "category": {
+                "base": "Other"
+              },
+              "uuid": "afbf5fae-a784-428e-a440-ae548a84c273",
+              "destination_type": "A",
+              "test": {
+                "type": "true"
+              },
+              "destination": "54ea247f-7bd7-4233-a2f4-0f01b2585eee",
+              "label": null
+            }
+          ],
+          "finished_key": null,
+          "ruleset_type": "group",
+          "response_type": "",
+          "operand": "@step.value",
+          "config": {}
+        }
+      ],
+      "base_language": "base",
+      "flow_type": "F",
+      "version": "11.3",
+      "metadata": {
+        "expires": 5,
+        "saved_on": "2017-12-20T21:57:22.535072Z",
+        "uuid": "8a24b666-1545-476a-895f-ce9571926bab",
+        "name": "Registration Mother - Step2",
+        "revision": 132
+      }
+    }
+  ],
+  "campaigns": [],
+  "triggers": []
+}

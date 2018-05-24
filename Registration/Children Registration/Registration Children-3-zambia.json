@@ -1,0 +1,170 @@
+{
+  "version": "11.3",
+  "site": "https://app.rapidpro.io",
+  "flows": [
+    {
+      "entry": "c4958a26-7826-4a3b-b025-91cf2dffc5e8",
+      "action_sets": [
+        {
+          "uuid": "c4958a26-7826-4a3b-b025-91cf2dffc5e8",
+          "x": 260,
+          "y": 1,
+          "destination": null,
+          "actions": [
+            {
+              "type": "add_group",
+              "uuid": "a3de9e29-6437-4ba6-8fe6-eb4841c48e86",
+              "groups": [
+                {
+                  "uuid": "c152e2e7-2fdb-47c3-9e86-0c1dbcb78ff7",
+                  "name": "Children"
+                }
+              ]
+            },
+            {
+              "field": "name",
+              "type": "save",
+              "uuid": "d3198b8b-28dd-4796-bcee-0fcce7c7056f",
+              "value": "@(PROPER(parent.name))",
+              "label": "Contact Name"
+            },
+            {
+              "field": "dob",
+              "type": "save",
+              "uuid": "728f94dc-9d56-44d3-8b90-61fbe74ca33a",
+              "value": "@parent.dateofbirth",
+              "label": "Dob"
+            },
+            {
+              "field": "under5_id",
+              "type": "save",
+              "uuid": "6dfad426-062c-409f-8ade-6e3c5f62c285",
+              "value": "@parent.id",
+              "label": "Under5 Id"
+            },
+            {
+              "field": "sex",
+              "type": "save",
+              "uuid": "979aa428-ccd8-4498-8f57-c7fc3abd7dd9",
+              "value": "@parent.sex.category",
+              "label": "Sex"
+            },
+            {
+              "field": "birth",
+              "type": "save",
+              "uuid": "164b75f5-3402-4ede-b8ce-0f1d57de9de5",
+              "value": "@parent.birth.category",
+              "label": "Birth"
+            },
+            {
+              "field": "province",
+              "type": "save",
+              "uuid": "18f9349a-2023-43ab-a054-445aaafe621f",
+              "value": "@parent.contact.province",
+              "label": "Province"
+            },
+            {
+              "field": "district",
+              "type": "save",
+              "uuid": "992b1f6b-cd35-4662-97fe-b4ba42abe6ee",
+              "value": "@parent.contact.district",
+              "label": "District"
+            },
+            {
+              "field": "facility",
+              "type": "save",
+              "uuid": "8fa651b2-3fa0-417b-87a8-6ee0e5b563f6",
+              "value": "@parent.contact.facility",
+              "label": "Facility"
+            },
+            {
+              "field": "zone",
+              "type": "save",
+              "uuid": "e35f3ceb-a5ea-41a2-901c-a82eefbeee87",
+              "value": "@parent.contact.zone",
+              "label": "Zone"
+            },
+            {
+              "field": "supervisor",
+              "type": "save",
+              "uuid": "b02950fd-a543-4871-9492-ade7154e6e26",
+              "value": "@parent.contact.name",
+              "label": "Supervisor"
+            },
+            {
+              "field": "location",
+              "type": "save",
+              "uuid": "54cbfe0f-6e00-4fa8-9521-3935e7ecbc57",
+              "value": "@(PROPER(parent.location))",
+              "label": "Location"
+            },
+            {
+              "field": "position",
+              "type": "save",
+              "uuid": "13dc8112-475f-4526-9faf-90022ca9fac6",
+              "value": "Child",
+              "label": "Position"
+            },
+            {
+              "field": "mother_name",
+              "type": "save",
+              "uuid": "fd7954c3-e0f3-43d8-aed1-b80510e64b88",
+              "value": "@parent.caregiver_name",
+              "label": "Mother Name"
+            },
+            {
+              "field": "supervisor_phone",
+              "type": "save",
+              "uuid": "46341764-f156-43ec-a0f3-c6d3658e2765",
+              "value": "@parent.contact.tel_e164",
+              "label": "Supervisor Phone"
+            },
+            {
+              "field": "mother_phone",
+              "type": "save",
+              "uuid": "fe84a5b0-2e58-46f5-813b-05c0d008b779",
+              "value": "@parent.phone",
+              "label": "Mother Phone"
+            },
+            {
+              "field": "mvacc_id",
+              "type": "save",
+              "uuid": "e2b99969-1ad3-4f53-9d96-c24ed26ba67d",
+              "value": "@(CONCATENATE(contact.under5_id, \"/\", YEAR(contact.dob)))",
+              "label": "Mvacc Id"
+            },
+            {
+              "field": "date_joined",
+              "type": "save",
+              "uuid": "70e6217f-92a7-45e8-8478-f1aebcaabae2",
+              "value": "@date.today",
+              "label": "Date Joined"
+            },
+            {
+              "action": "GET",
+              "webhook": "http://www.1000days.mobi/zambia/addBaby.php?uuid=@contact.uuid&under5_id=@contact.under5_id&dob=@contact.dob&sex=@contact.sex&province=@contact.province&district=@contact.district&health_facility=@contact.facility&location=@contact.location&chw_phone=@contact.supervisor_phone&mother_phone=@contact.mother_phone&zone=@contact.zone&birth=@contact.birth&id=@contact.mvacc_id",
+              "type": "api",
+              "uuid": "10b8aaac-f642-4c27-9dbc-b820e75ebca0",
+              "webhook_headers": []
+            }
+          ],
+          "exit_uuid": "fad63ee9-dcc5-4666-aff9-5bae7f0a4f05"
+        }
+      ],
+      "rule_sets": [],
+      "base_language": "base",
+      "flow_type": "F",
+      "version": "11.3",
+      "metadata": {
+        "uuid": "df914ce9-f480-408a-bc93-bcd9a11d139c",
+        "notes": [],
+        "expires": 5,
+        "name": "Registration Baby - Step2",
+        "saved_on": "2017-12-20T21:57:19.430630Z",
+        "revision": 240
+      }
+    }
+  ],
+  "campaigns": [],
+  "triggers": []
+}
