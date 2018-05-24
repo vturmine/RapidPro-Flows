@@ -1,8 +1,8 @@
 # Children Registration by Community Health Worker
 
 Health Workers are enable to register patient, newborn or children for vaccination or treatment. Within RapidPro Registration flow, Health workers will collect essential details for each patient such medical ID, date of birth, disease information, location and contact information (phone number). RapidPro proposes two options: 
-1. Step-by-Step registration
-2. Formatted SMS registration
+1. [Step-by-Step registration](#step-by-step-registration)
+2. [Formatted SMS registration](#formatted-sms-registration)
 
 ## Step-by-Step registration
 
@@ -24,7 +24,7 @@ Coming soon
 ### Result
 The new child is registered in RapidPro
 
-### Formatted SMS registration
+## Formatted SMS registration
 
 ### Requirements
 On RapidPro:
