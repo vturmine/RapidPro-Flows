@@ -7,6 +7,10 @@ Health Workers are enable to register patient, newborn or children for vaccinati
 ## Step-by-Step registration
 
 ### Requirements
+Before RapidPro:
+1. Create or use official ID with MoH
+2. Setup a webhook with ID registered
+
 On RapidPro:
 1. Create RapidPro groups: CHW - CHILDREN - MOTHERS
 2. Add Province, District, Health Facility, Zone fields
@@ -27,6 +31,10 @@ The new child is registered in RapidPro
 ## Formatted SMS registration
 
 ### Requirements
+Before RapidPro:
+1. Create or use official ID with MoH
+2. Setup a webhook with ID registered
+
 On RapidPro:
 1. Create RapidPro groups: CHW - CHILDREN - MOTHERS
 2. Add Province, District, Health Facility, Zone fields
