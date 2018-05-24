@@ -17,7 +17,7 @@ By Application
 * [Feedback](/Feedback/)
 
 By Use Cases
-* [Vaccination](/Immunization/)
+* [Vaccination](./Vaccination/)
 * Nutrition
 * HIV/AIDS
 * Malaria
