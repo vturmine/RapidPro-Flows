@@ -1,9 +1,9 @@
 # RapidPro Health Flows
 
 Depositories for RapidPro Flows of Digital Health Deployments
-* Patient registration
+* [Registration] (/Registration/)
 * Health worker registration
-* [Immunization](/Immunization/)
+* [Report/Tracking](/tracking/)
 * Nutrition
 * HIV/AIDS
 * Malaria
