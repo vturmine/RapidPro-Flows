@@ -1,24 +1,45 @@
-# RapidPro Health Flows
+# Children Registration by Community Health Worker
 
-Depositories for RapidPro Flows of Digital Health Deployments
+Health Workers are enable to register patient, newborn or children for vaccination or treatment. Within RapidPro Registration flow, Health workers will collect essential details for each patient such medical ID, date of birth, disease information, location and contact information (phone number). RapidPro proposes two options: 
+1. Step-by-Step registration
+2. Formatted SMS registration
 
-By Application
-* [Registration](/Registration/)
-* [Reminder](/Reminder/)
-* [Report/Tracking](/tracking/)
-* [Alert](/Alert/)
-* [Campaign](/Campaign/)
-* [Provider 2 Provider](/Provider2Provider/)
-* [Data Collection](/Datacollection/)
-* [Data Exchange](/DataExchange/)
-* [Feedback](/Feedback/)
+## Step-by-Step registration
 
-By Use Cases
-* [Vaccination](/Immunization/)
-* Nutrition
-* HIV/AIDS
-* Malaria
-* Stock Monitoring
-* Emergency & Coordination
+### Requirements
+On RapidPro:
+1. Create RapidPro groups: CHW - CHILDREN - MOTHERS
+2. Add Province, District, Health Facility, Zone fields
+3. For each CHW, Province, District, Health Facility, Zone have to be filled before registration
 
+### For who?
+Community Health Worker (CHW)
 
+### How it works?
+1. As CHW, we reach RapidPro sending the keyword BABY (https://rapidpro.github.io/rapidpro/docs/triggers/)
+...
+Coming soon
+...
+
+### Result
+The new child is registered in RapidPro
+
+### Formatted SMS registration
+
+### Requirements
+On RapidPro:
+1. Create RapidPro groups: CHW - CHILDREN - MOTHERS
+2. Add Province, District, Health Facility, Zone fields
+3. For each CHW, Province, District, Health Facility, Zone have to be filled before registration
+
+### For who?
+Community Health Worker (CHW)
+
+### How it works?
+1. As CHW, we reach RapidPro sending the keyword BABY (https://rapidpro.github.io/rapidpro/docs/triggers/)
+...
+Coming soon
+...
+
+### Result
+The new child is registered in RapidPro
