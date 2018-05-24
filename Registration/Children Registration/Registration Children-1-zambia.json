@@ -1,3 +1,17 @@
+/*
+Flow for children registration - Step 1 - Data Collection
+Requirement: 
+- Create Contact groups CHW and Children
+- CHW fields required: Province, District, Health Facility, Zone
+- Children fields required: ID, Province, District, Health Facility
+- 5 Steps:  
+  1. Send BABY
+  2. ID + SEX + DOB + NAME (option)
+  3. PHONE + MOTHER + VILLAGE
+  4. Place of Birth (you could add other detail - e.g. HIV, Disability, ...)
+  5. Confirmation (Y/N)
+*/ 
+
 {
   "version": "11.3",
   "site": "https://app.rapidpro.io",
