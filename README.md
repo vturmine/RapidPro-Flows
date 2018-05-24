@@ -6,7 +6,7 @@
 Depositories for RapidPro Flows of Digital Health Deployments
 
 By Application
-* [Registration](/blob/master/registration/)
+* [Registration](/registration/)
 * [Reminder](/Reminder/)
 * [Report/Tracking](/tracking/)
 * [Alert](/Alert/)
