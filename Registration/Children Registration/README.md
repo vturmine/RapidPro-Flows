@@ -49,5 +49,7 @@ Community Health Worker (CHW)
 Coming soon
 ...
 
+<img src="../../RapidPro-Health/RPH/screenshots/screencapture-app-rapidpro-io-flow-editor-a223082e-6eef-4aa6-a3f6-e6e1f274b001-2018-05-24-16_56_29.png"><img>
+
 ### Result
 The new child is registered in RapidPro
